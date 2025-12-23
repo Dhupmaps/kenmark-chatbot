@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { saveKnowledgeFile } from '../../../../lib/knowledge.js'
 
-export const config = { api: { bodyParser: false } }
+export const runtime = 'nodejs'
 
 function _isAuthorized(req){
   const ADMIN_KEY = process.env.ADMIN_KEY
