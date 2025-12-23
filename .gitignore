@@ -1,0 +1,45 @@
+.DS_Store
+Thumbs.db
+
+# Root env files
+.env
+.env.local
+
+# Logs and caches
+*.log
+logs/
+debug.log
+.cache/
+coverage/
+
+# --- Next.js / frontend ---
+next-app/node_modules/
+next-app/.next/
+next-app/.vercel/
+next-app/.turbo/
+next-app/.pnp/
+next-app/npm-debug.log*
+next-app/yarn-error.log*
+next-app/.env
+next-app/.env.local
+next-app/.env.*.local
+
+# Frontend data that should not be committed
+next-app/data/chats.db.json
+
+# --- Python / backend ---
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/.env.local
+backend/chatlogs.db
+Thumbs.db
+
+backend/venv/
+backend/__pycache__/
+backend/.env
+
+next-app/node_modules/
+next-app/dist/
+next-app/.env

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{ --ken-gray-100:#f3f4f6; --ken-gray-900:#0b1220; --ken-purple-600:#6b21a8; --ken-purple-500:#7c3aed; --ken-purple-400:#a78bfa; --ken-blue-400:#60a5fa; }
+
+/* small helpers used by the components */
+.card{ @apply p-4 rounded-xl bg-white text-gray-900 dark:bg-slate-800 dark:text-white shadow-xl ring-1 ring-black/5 dark:ring-white/10 }
+
+/* Legacy app.css helpers migrated from frontend */
+#root{ max-width:1280px; margin:0 auto; padding:2rem; text-align:center; background:var(--ken-gray-100); color:var(--ken-gray-900); }
+.logo{ height:6em; padding:1.5em; will-change:filter; transition:filter 300ms; }
+.logo:hover{ filter: drop-shadow(0 0 2em var(--ken-purple-400)); }
+
+.read-the-docs{ color:#888; }
+
+/* Utility for dark mode fallback */
+html.dark .dark\:bg-gray-900{ background:var(--ken-gray-900) }
+
+/* Hero aesthetics */
+.hero{
+  background: radial-gradient(800px 400px at 20% 20%, rgba(124,58,237,0.25), transparent 60%),
+              radial-gradient(800px 400px at 80% 10%, rgba(96,165,250,0.25), transparent 60%);
+}
+.hero .gradient-text{ background: linear-gradient(90deg, #7c3aed, #60a5fa); -webkit-background-clip:text; background-clip:text; color: transparent; }
+
+/* Small tweaks for chat widget */
+.kw-highlight{ color:var(--ken-purple-600) }
+
+/* Floating chat tweaks */
+.chat-floating{ box-shadow: 0 10px 30px rgba(2,6,23,0.12) }
+
+/* Footer / small responsive tweaks */
+@media (max-width: 640px){
+  #root{ padding:1rem }
+  .card{ padding:1rem }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  a:nth-of-type(2) .logo{ animation: logo-spin infinite 20s linear }
+}
+
+@keyframes logo-spin{ from{ transform: rotate(0deg);} to{ transform: rotate(360deg);} }
